@@ -9,8 +9,6 @@ for (var i = 0; i < list.length; i++) {
     makeSound(button);
     buttonAnmimation(button)
 
-    console.log("list", this);
-
   })
 }
 
@@ -20,8 +18,6 @@ document.addEventListener("keydown", function(e) {
 
   makeSound(e.key);
   buttonAnmimation(e.key);
-
-  console.log("list", e.key);
 
 })
 
@@ -65,9 +61,9 @@ function makeSound(key){
 function buttonAnmimation(currentKey){
   var currentButton = document.querySelector("." + currentKey);
   
-  currentButton.classList.add("pressed");
+  currentButton?.classList?.add("pressed");
 
   setTimeout(function(){
-    currentButton.classList.remove("pressed");
+    currentButton?.classList?.remove("pressed");
   }, 100);
 }
